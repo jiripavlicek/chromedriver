@@ -53,7 +53,7 @@ USER webdriver
 ENTRYPOINT ["entrypoint", "reverse-proxy", "chromedriver"]
 
 # Bind chromedriver to port 5555:
-CMD ["--port=5555"]
+CMD ["--port=5555", "--url-base=/wd/hub"]
 
 # Expose nginx on port 4444, forwarding to chromedriver on port 5555:
 EXPOSE 4444
